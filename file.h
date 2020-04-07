@@ -13,7 +13,7 @@ private:
 	int year;
 public:
 	Person(string, string, int);
-    //перегрузка операторов
+    //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂРѕРІ
 	Person & operator=(const Person &obj);
 	bool operator==(const Person &r) const;
 	bool operator<(const Person &r) const;
@@ -21,13 +21,13 @@ public:
 	bool operator<=(const Person &r) const;
 	bool operator>=(const Person &r) const;
 	bool operator!=(const Person &r) const;
-    //friend перед функцией используется, чтобы дать право этой функции
-    //взаимодействовать с закрытыми членами класса (private, protected)
-	friend ostream & operator<<(ostream &s, Person const &obj) { //оператор вывода обьекта "<<"
+  	//friend РїРµСЂРµРґ С„СѓРЅРєС†РёРµР№ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ, С‡С‚РѕР±С‹ РґР°С‚СЊ РїСЂР°РІРѕ СЌС‚РѕР№ С„СѓРЅРєС†РёРё
+    	//РІР·Р°РёРјРѕРґРµР№СЃС‚РІРѕРІР°С‚СЊ СЃ Р·Р°РєСЂС‹С‚С‹РјРё С‡Р»РµРЅР°РјРё РєР»Р°СЃСЃР° (private, protected)
+	friend ostream & operator<<(ostream &s, Person const &obj) { //РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° РѕР±СЊРµРєС‚Р° "<<"
 		s << obj.name << "  " << obj.surname << "  " << obj.year << endl;
 	}
 
-	friend istream & operator>>(istream &s, Person &obj) {    //оператор ввода обьекта ">>"
+	friend istream & operator>>(istream &s, Person &obj) {    //РѕРїРµСЂР°С‚РѕСЂ РІРІРѕРґР° РѕР±СЊРµРєС‚Р° ">>"
 		getline(cin, obj.name);
 		getline(cin, obj.surname);
 		cin >> obj.year;
