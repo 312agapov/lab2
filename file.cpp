@@ -1,37 +1,37 @@
 #include "file.h"
 
-Person::Person(string _name, string _surname, int _year) {  //êîíñòğóêòîğ ñ ïàğàìåòğàìè
-    //íóæåí ÷òîáû ñîçäàòü 3 îáüåêòà(3 ğàáîòíèêîâ)
+Person::Person(string _name, string _surname, int _year) {  //ĞºĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€ Ñ Ğ¿Ğ°Ñ€Ğ°Ğ¼ĞµÑ‚Ñ€Ğ°Ğ¼Ğ¸
+    //Ğ½ÑƒĞ¶ĞµĞ½ Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ ÑĞ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ 3 Ğ¾Ğ±ÑŒĞµĞºÑ‚Ğ°(3 Ñ€Ğ°Ğ±Ğ¾Ñ‚Ğ½Ğ¸ĞºĞ¾Ğ²)
 	name = _name;
 	surname = _surname;
 	year = _year;
 }
 
-Person & Person::operator=(const Person &o) { //îïåğàòîğ ïğèñâàèâàíèÿ
+Person & Person::operator=(const Person &o) { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ Ğ¿Ñ€Ğ¸ÑĞ²Ğ°Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ
 	this->name = o.name, this->surname = o.surname, this->year = o.year;
 	return *this;
 }
 
-bool Person::operator==(const Person &r) const { //îïåğàòîğ ïğèğàâíèâàíèÿ
+bool Person::operator==(const Person &r) const { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ Ğ¿Ñ€Ğ¸Ñ€Ğ°Ğ²Ğ½Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ
 	return ((this->name == r.name) && (this->surname == r.surname) && (this->year == r.year));
 }
 
-bool Person::operator<(const Person &r) const { // îïåğàòîğ ñğàâíåíèÿ
+bool Person::operator<(const Person &r) const { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ ÑÑ€Ğ°Ğ²Ğ½ĞµĞ½Ğ¸Ñ
 	return ((this->name < r.name) && (this->surname < r.surname) && (this->year < r.year));
 }
 
-bool Person::operator>(const Person &r) const { // îïåğàòîğ ñğàâíåíèÿ
+bool Person::operator>(const Person &r) const { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ ÑÑ€Ğ°Ğ²Ğ½ĞµĞ½Ğ¸Ñ
 	return ((this->name > r.name) && (this->surname > r.surname) && (this->year > r.year));
 }
 
-bool Person::operator<=(const Person &r) const { // îïåğàòîğ ñğàâíåíèÿ
+bool Person::operator<=(const Person &r) const { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ ÑÑ€Ğ°Ğ²Ğ½ĞµĞ½Ğ¸Ñ
 	return ((this->name <= r.name) && (this->surname <= r.surname) && (this->year <= r.year));
 }
 
-bool Person::operator>=(const Person &r) const { // îïåğàòîğ ñğàâíåíèÿ
+bool Person::operator>=(const Person &r) const { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ ÑÑ€Ğ°Ğ²Ğ½ĞµĞ½Ğ¸Ñ
 	return ((this->name >= r.name) && (this->surname >= r.surname) && (this->year >= r.year));
 }
 
-bool Person::operator!=(const Person &r) const { //îïåğàòîğ àíòèïğèğàâíèâàíèÿ
+bool Person::operator!=(const Person &r) const { //Ğ¾Ğ¿ĞµÑ€Ğ°Ñ‚Ğ¾Ñ€ Ğ°Ğ½Ñ‚Ğ¸Ğ¿Ñ€Ğ¸Ñ€Ğ°Ğ²Ğ½Ğ¸Ğ²Ğ°Ğ½Ğ¸Ñ
 	return ((this->name != r.name) && (this->surname != r.surname) && (this->year != r.year));
 }
